@@ -2,6 +2,7 @@
   <el-tree
     :data="props.data"
     :props="treeProps"
+    :show-checkbox="props.showCheckbox"
     :expand-on-click-node="props.expandOnClickNode"
     :highlight-current="props.highlightCurrent"
     :default-expand-all="props.defaultExpandAll"

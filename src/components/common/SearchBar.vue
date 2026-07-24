@@ -17,10 +17,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 
-defineProps<{
+const props = defineProps<{
   modelValue?: string
   placeholder?: string
 }>()
@@ -31,7 +31,11 @@ const emit = defineEmits<{
   (e: 'reset'): void
 }>()
 
-const keyword = ref('')
+const keyword = ref(props.modelValue || '')
+
+watch(() => props.modelValue, (val) => {
+  keyword.value = val || ''
+})
 
 const handleSearch = () => {
   emit('update:modelValue', keyword.value)

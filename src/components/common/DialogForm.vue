@@ -1,10 +1,11 @@
 <template>
   <el-dialog
     :title="props.title"
-    :visible="props.visible"
+    :model-value="props.visible"
     :width="props.width || '600px'"
     :close-on-click-modal="false"
     @close="handleClose"
+    @update:model-value="(val: boolean) => { if (!val) handleClose() }"
   >
     <el-form
       ref="formRef"
