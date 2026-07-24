@@ -1,0 +1,25 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# lock
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# logs
+*.log
+npm-debug.log*
+
+# editor
+.vscode
+.idea
+.DS_Store
+*.suo
+*.sw?
+
+# env
+.env
+.env.local
+.env.*.local
