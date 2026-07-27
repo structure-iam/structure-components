@@ -25,6 +25,8 @@ export default defineConfig({
         'element-plus',
         '@element-plus/icons-vue',
         '@structure-projects/gateway-client',
+        '@wangeditor/editor',
+        '@wangeditor/editor-for-vue',
       ],
       output: {
         globals: {
@@ -32,6 +34,8 @@ export default defineConfig({
           'element-plus': 'ElementPlus',
           '@element-plus/icons-vue': 'ElementPlusIconsVue',
           '@structure-projects/gateway-client': 'GatewayClient',
+          '@wangeditor/editor': 'WangEditor',
+          '@wangeditor/editor-for-vue': 'WangEditorForVue',
         },
       },
     },

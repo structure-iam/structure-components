@@ -3,7 +3,7 @@
     :data="props.data"
     :border="props.border"
     :striped="props.striped"
-    :size="props.size || 'medium'"
+    :size="props.size || 'default'"
     :max-height="props.maxHeight"
   >
     <template v-for="column in props.columns" :key="column.prop">
@@ -48,7 +48,7 @@ const props = defineProps<{
   }[]
   border?: boolean
   striped?: boolean
-  size?: 'large' | 'medium' | 'small'
+  size?: '' | 'large' | 'default' | 'small'
   maxHeight?: string | number
   hasActions?: boolean
   actionWidth?: string

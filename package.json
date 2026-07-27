@@ -27,9 +27,24 @@
     "element-plus": "^2.9.5",
     "vue": "^3.5.13"
   },
+  "peerDependencies": {
+    "@wangeditor/editor": "^5.1.0",
+    "@wangeditor/editor-for-vue": "^5.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@wangeditor/editor": {
+      "optional": true
+    },
+    "@wangeditor/editor-for-vue": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/language-core": "^3.3.8",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "sass-embedded": "^1.100.0",
     "typescript": "^5.7.2",
     "vite": "^8.1.0",
     "vite-plugin-dts": "^5.0.0",

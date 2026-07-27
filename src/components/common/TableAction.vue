@@ -22,7 +22,7 @@ defineProps<{
     type?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
     icon?: unknown
   }[]
-  size?: 'large' | 'medium' | 'small'
+  size?: '' | 'default' | 'small' | 'large'
 }>()
 
 const emit = defineEmits<{
