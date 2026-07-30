@@ -1,0 +1,11 @@
+src/
+demo/
+docs/
+.github/
+.gitignore
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+*.env
+*.env.local
+.env.*.local

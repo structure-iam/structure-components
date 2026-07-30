@@ -2,6 +2,7 @@
   <div class="tags-view" v-if="visible && views.length > 0">
     <div class="tags-view__actions">
       <el-icon
+        :size="14"
         class="tags-view__arrow"
         :class="{ disabled: scrollLeft <= 0 }"
         @click="scrollTo('left')"
@@ -22,6 +23,7 @@
           <span class="tags-view__tag-title">{{ view.title }}</span>
           <el-icon
             v-if="!view.affix"
+            :size="12"
             class="tags-view__tag-close"
             @click.stop="handleClose(view)"
           >
@@ -32,6 +34,7 @@
     </div>
     <div class="tags-view__actions">
       <el-icon
+        :size="14"
         class="tags-view__arrow"
         :class="{ disabled: scrollRight <= 0 }"
         @click="scrollTo('right')"

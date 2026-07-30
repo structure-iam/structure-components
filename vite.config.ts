@@ -12,12 +12,13 @@ export default defineConfig({
     insertTypesEntry: true,
   })],
   build: {
-    // emptyOutDir: true 默认不需要，vite build 会自动清理
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        'wang-editor': resolve(__dirname, 'src/wang-editor.ts'),
+      },
       name: 'StructureComponents',
-      fileName: 'index',
-      formats: ['es', 'umd'],
+      formats: ['es'],
     },
     rollupOptions: {
       external: [
@@ -28,16 +29,6 @@ export default defineConfig({
         '@wangeditor/editor',
         '@wangeditor/editor-for-vue',
       ],
-      output: {
-        globals: {
-          vue: 'Vue',
-          'element-plus': 'ElementPlus',
-          '@element-plus/icons-vue': 'ElementPlusIconsVue',
-          '@structure-projects/gateway-client': 'GatewayClient',
-          '@wangeditor/editor': 'WangEditor',
-          '@wangeditor/editor-for-vue': 'WangEditorForVue',
-        },
-      },
     },
   },
   resolve: {
