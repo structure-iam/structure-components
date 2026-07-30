@@ -1,6 +1,6 @@
 {
   "name": "@structure-projects/components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,7 +13,7 @@
       "types": "./dist/wang-editor.d.ts",
       "import": "./dist/wang-editor.js"
     },
-    "./dist/index.css": "./dist/index.css"
+    "./dist/components.css": "./dist/components.css"
   },
   "scripts": {
     "dev": "vite",
