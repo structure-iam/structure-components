@@ -1,5 +1,6 @@
 export interface PaginationParams {
-  page: number
+  page: number,
+  pageNum: number,
   pageSize: number
   keyword?: string
 }
@@ -7,8 +8,9 @@ export interface PaginationParams {
 export interface PaginationResult<T> {
   list: T[]
   total: number
-  page: number
-  pageSize: number
+  page: number,
+  pageNum: number,
+  pageSize: number,
 }
 
 export interface FormItemProps {
