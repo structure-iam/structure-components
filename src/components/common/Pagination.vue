@@ -16,7 +16,8 @@
 import { ref, watch } from 'vue'
 
 const props = defineProps<{
-  page: number
+  page: number,
+  pageNum: number,
   pageSize: number
   total: number
 }>()

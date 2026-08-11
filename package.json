@@ -4,6 +4,7 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "style": "./dist/components.css",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -13,13 +14,18 @@
       "types": "./dist/wang-editor.d.ts",
       "import": "./dist/wang-editor.js"
     },
-    "./dist/components.css": "./dist/components.css"
+    "./dist/components.css": "./dist/components.css",
+    "./dist/index.css": "./dist/components.css"
   },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
     "publish:npm": "npm publish --access public"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist"
@@ -43,14 +49,20 @@
     }
   },
   "devDependencies": {
+    "@element-plus/icons-vue": "^2.3.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/language-core": "^3.3.8",
+    "@vue/test-utils": "^2.4.6",
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-vue": "^5.1.12",
+    "element-plus": "^2.9.0",
+    "jsdom": "^25.0.1",
     "sass-embedded": "^1.100.0",
     "typescript": "^5.7.2",
     "vite": "^8.1.0",
     "vite-plugin-dts": "^5.0.0",
+    "vitest": "^2.1.8",
+    "vue": "^3.5.0",
     "vue-tsc": "^3.3.0"
   }
 }
