@@ -148,9 +148,8 @@ npm run preview        # 预览构建产物
 
 | Workflow | 用途 |
 |----------|------|
-| `.github/workflows/test.yml` | push / PR 触发：`npm ci` + `vue-tsc` + `vitest` |
-| `.github/workflows/publish.yml` | release 触发：构建并发布根包到 npm |
-| `.github/workflows/publish-npm.yml` | release / 手动触发：版本注入 + 构建 + npm 发布 |
+| `.github/workflows/test.yml` | PR 触发：`npm install` + `vue-tsc` + `vitest` |
+| `.github/workflows/publish.yml` | release 触发：版本注入 + 构建 + npm 发布 |
 
 - Node 版本：22 LTS
 - npm scope：`@structure-projects`（公开包，`--access public`）
