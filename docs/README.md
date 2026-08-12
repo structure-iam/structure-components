@@ -104,9 +104,6 @@ import type {
   TableColumn,
   DialogFormProps,
   TagViewData,
-  LanguageOption,
-  MultiUploadProps,
-  SingleUploadProps,
 } from '@structure-projects/components'
 ```
 
