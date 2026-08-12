@@ -85,8 +85,7 @@ import type { TableColumn } from '@structure-projects/components'
 
 | 名称 | 说明 | 文档 |
 |------|------|------|
-| `useTagsView` | 标签页管理 | [use-tags-view.md](features/use-tags-view.md) |
-| `useThemeFromWujie` | wujie 主题同步 | [use-theme-from-wujie.md](features/use-theme-from-wujie.md) |
+| `useSubApp` | 子应用组合函数 | [use-sub-app.md](features/use-sub-app.md) |
 
 ### 可选入口
 
@@ -131,8 +130,7 @@ docs/
 │   ├── error-page-404.md
 │   ├── page-container.md
 │   ├── tags-view.md
-│   ├── use-tags-view.md
-│   ├── use-theme-from-wujie.md
+│   ├── use-sub-app.md
 │   └── wang-editor.md
 └── IAM_COMPONENTS_DESIGN.md     # 详细设计文档
 ```
