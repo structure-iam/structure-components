@@ -23,7 +23,7 @@
 - **按需命名导入**：非 Vue 插件，不提供 `app.use()` 全局注册，按需 `import { DataTable } from '@structure-projects/components'`。
 - **Element Plus external**：`element-plus` 作为 `peerDependency`，由消费项目自行 `app.use(ElementPlus)` 并导入 CSS。
 - **TypeScript strict**：完整 Props / Emits 类型与 `.d.ts` 声明。
-- **wujie 子应用友好**：内置 `PageContainer` / `TagsView` 布局组件与 `useTagsView` / `useThemeFromWujie` 组合函数。
+- **wujie 子应用友好**：内置 `PageContainer` / `TagsView` 布局组件与 `useSubApp` 组合函数。
 - **可选入口**：`WangEditor` 独立入口 `@structure-projects/components/wang-editor`，避免未安装 wangeditor 的消费者编译失败。
 
 ## 技术栈
@@ -100,8 +100,7 @@ import '@structure-projects/components/dist/components.css'
 
 | 名称 | 说明 | 文档 |
 |------|------|------|
-| `useTagsView` | 标签页管理 | [API & 示例](docs/features/use-tags-view.md) |
-| `useThemeFromWujie` | wujie 主题同步 | [API & 示例](docs/features/use-theme-from-wujie.md) |
+| `useSubApp` | 子应用组合函数 | [API & 示例](docs/features/use-sub-app.md) |
 
 ### WangEditor（可选入口）
 
@@ -115,8 +114,7 @@ import { WangEditor } from '@structure-projects/components/wang-editor'
 
 ```ts
 // 子应用组合函数
-import { useTagsView, useThemeFromWujie } from '@structure-projects/components'
-import type { TagViewData } from '@structure-projects/components'
+import { useSubApp } from '@structure-projects/components'
 
 // 网关请求封装（基于 @structure-projects/gateway-client）
 import { request } from '@structure-projects/components'
@@ -148,9 +146,8 @@ npm run preview        # 预览构建产物
 
 | Workflow | 用途 |
 |----------|------|
-| `.github/workflows/test.yml` | push / PR 触发：`npm ci` + `vue-tsc` + `vitest` |
-| `.github/workflows/publish.yml` | release 触发：构建并发布根包到 npm |
-| `.github/workflows/publish-npm.yml` | release / 手动触发：版本注入 + 构建 + npm 发布 |
+| `.github/workflows/test.yml` | PR 触发：`npm install` + `vue-tsc` + `vitest` |
+| `.github/workflows/publish.yml` | release 触发：版本注入 + 构建 + npm 发布 |
 
 - Node 版本：22 LTS
 - npm scope：`@structure-projects`（公开包，`--access public`）
@@ -166,7 +163,7 @@ structure-components/
 │   │   ├── common/     # 通用组件
 │   │   ├── PageContainer/
 │   │   └── TagsView/
-│   ├── composables/    # useTagsView / useThemeFromWujie
+│   ├── composables/    # useSubApp
 │   ├── types/          # 类型定义
 │   ├── index.ts        # 主入口
 │   └── wang-editor.ts  # WangEditor 独立入口
